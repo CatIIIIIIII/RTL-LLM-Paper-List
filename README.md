@@ -10,11 +10,35 @@
 
 ## 1. LLM Foundations
 
-- [2024/07] **Converging Paradigms: The Synergy of Symbolic and Connectionist AI in LLM-Empowered Autonomous Agents** [[paper](https://arxiv.org/abs/2407.08516)]
+- [2024/09] **VerilogCoder: Autonomous Verilog Coding Agents with Graph-based Planning and Abstract Syntax Tree (AST)-based Waveform Tracing Tool** [[paper](https://arxiv.org/abs/2408.08927)]
+  - VERY IMPORTANT. Use graph-based planning to guide the LLMs to generate the code. Graph of thoughts for task planning. Tool feedback for code generation.
+
+- [2024/07] **Converging Paradigms: The Synergy of Symbolic and Connectionist AI in LLM-Empowered Autonomous Agents** [[paper](https://arxiv.org/abs/2407.08516)] 
   - IMPORTANT. Future direction for assertion based code generation.
-  
+
+- [2024/06] **Interactive Evolution: A Neural-Symbolic Self-Training Framework For Large Language Models** [[paper](https://arxiv.org/abs/2406.11736)] [[code](https://github.com/xufangzhi/ENVISIONS)]
+  - A framework to let LLMs to interact with the environment and learn from the feedback. Use contrastive learning to improve the performance.
+
+- [2024/06] **DeepSeek-Coder-V2: Breaking the Barrier of Closed-Source Models in Code Intelligence** [[paper](https://arxiv.org/abs/2406.11931)]
+  - IMPORTANT. In terms of code preference data, although the code compiler itself can already provide 0-1 feedback (whether the code pass all test cases or not), some code prompts may have a limited number of test cases, and do not provide full coverage, and hence directly using 0-1 feedback from the compiler may be noisy and sub-optimal.
+
+- [2024/06] **Apple Intelligence Foundation Language Models** [[paper](https://arxiv.org/pdf/2407.21075)]
+  - Apple's LLM. A small LLM for mobile devices.
+
 - [2024/06] **Q-Sparse: All Large Language Models can be Sparsely-Activated** [[paper](https://arxiv.org/pdf/2407.10969)]
   - Select top-k in all linear layers to sparse network.
+
+- [2024/06] **Sheared LLaMA: Accelerating Language Model Pre-training via Structured Pruning** [[paper](https://arxiv.org/abs/2310.06694)]
+  - Prune the LLMs, making sure a fix ratio to structured pruning.
+
+- [2024/06] **PathReasoner: Modeling Reasoning Path with Equivalent Extension for Logical Question Answering** [[paper](https://arxiv.org/abs/2405.19109)]
+  - Add a transformer layer to model and diffuse the reasoning path.
+
+- [2024/06] **Advancing LLM Reasoning Generalists with Preference Trees** [[paper](https://arxiv.org/abs/2406.11931)] [[code](https://github.com/OpenBMB/Eurus)]
+  - IMPORTANT. Use preference tree to guide the LLMs through the reasoning process.
+
+- [2024/04] **Is DPO Superior to PPO for LLM Alignment? A Comprehensive Study** [[paper](https://arxiv.org/pdf/2404.10719)]
+  - IMPORTANT. Key Factors to PPO for RLHF: (1) advantage normalization, (2) large- batch-size training, and (3) updating the parameters of the reference model with exponential moving average.
 
 - [2024/03] **Extensive Self-Contrast Enables Feedback-Free Language Model Alignment [[paper](https://arxiv.org/pdf/2404.00604)]
   - IMPORTANT. Use failed sft result as dpo negatives.
@@ -22,11 +46,29 @@
 - [2024/02] **Generative Representational Instruction Tuning** [[paper](https://arxiv.org/abs/2402.09906)] [[code](https://github.com/ContextualAI/gritlm)]
   - IMPORTANT. Pretrained generative model could have the ability for embedding task by simple fine-tuning without performance loss.
 
+- [2024/02] **Symbol-LLM: Towards Foundational Symbol-centric Interface For Large Language Models** [[paper](https://arxiv.org/abs/2311.09278)]
+  - Create a benchmark for symbol LLM tasks.
+
+- [2024/02] **The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits** [[paper](https://arxiv.org/abs/2402.17764)]
+  - IMPORTANT. Use (-1, 0, 1) quantization to compress all linear layers in LLMs. 
+
+-[2024/01] **DeepSeekMoE: Towards Ultimate Expert Specialization in Mixture-of-Experts Language Models** [[paper](https://arxiv.org/abs/2401.06066)]
+  - Design common expert for all tasks, and task-specific expert for each task. And group the task-specific expert into groups.
+
 - [2024/01] **Mixtral of Experts** [[paper](https://arxiv.org/pdf/2401.04088)]  [[code](https://github.com/mistralai/mistral-src)]
   - One of the most popular open-source LLMs. A new model architecture that combines the strengths of transformer and mixture of experts.
 
 - [2024/01] **Secrets of RLHF in Large Language Models Part II: Reward Modeling** [[paper](https://arxiv.org/pdf/2401.06080)]  [[code](https://github.com/OpenLMLab/MOSS-RLHF)]
   - IMPORTANT. Design superior reward dataset. (1) Label smothing; (2) Contrastive learning for improving; (3) Adaptive Margin; (4) Meta-learning for shifted reward distribution.
+
+- [2023/12] **Tree of Thoughts: Deliberate Problem Solving with Large Language Models** [[paper](https://openreview.net/pdf?id=5Xc1ecxO1h)]
+    - IMPORTANT. Use tree structure to guide the LLMs to think and solve the problem.
+
+- [2023/12] **DeepSeek: Towards Expert-Level Code Intelligence with Large Language Models** [[paper](https://arxiv.org/pdf/2312.08617)]
+
+- [2023/08] **A Survey on Large Language Model based Autonomous Agents** [[paper](https://arxiv.org/abs/2308.11432)]
+
+- [2023/08] **ChatEval: Towards Better LLM-based Evaluators through Multi-Agent Debate** [[paper](https://arxiv.org/abs/2308.07201)]
 
 - [2023/07] **Llama 2: Open Foundation and Fine-Tuned Chat Models** [[paper](https://arxiv.org/pdf/2307.09288)] [[code](https://github.com/facebookresearch/llama)]
   - IMPORTANT. The second version of LLaMA. It is used to initialize Code LLaMA.
@@ -52,6 +94,9 @@
 - [2022/10] **Self-Instruct: Aligning Language Models with Self-Generated Instructions** [[paper](https://arxiv.org/pdf/2212.10560)] [[code](https://github.com/yizhongw/self-instruct)]
   - Boost the performace of LLM by the intruction generated by itself.
 
+- [2022/10] **Emergent Abilities of Large Language Model** [[paper](https://arxiv.org/pdf/2206.07682)]
+  - IMPORTANT. Large language models (LLMs) would acquire emergent abilities that are not explicitly trained for.
+
 - [2022/09] **SGPT: GPT Sentence Embeddings for Semantic Search
 ** [[paper](https://arxiv.org/pdf/2202.08904)] [[code](https://github.com/Muennighoff/sgpt)]
   - Use generative GPT to act as a embedding model.
@@ -71,12 +116,14 @@ tasks as span corruption, diversifies and then mixes them.
 
 - [2022/02] **Finetuned Language Models are Zero-shot Learners** [[paper](https://arxiv.org/pdf/2109.01652)] [[code](https://github.com/google-research/flan)]
   - IMPORTANT. They propose Instruction Fine-tuning, which is a new fine-tuning strategy for LLMs. It is widely used in the field of LLMs.
-  
+
+- [2022/01] **Show Your Work: Scratchpads for Intermediate Computation with Language Models** [[paper](https://arxiv.org/abs/2112.00114)]
+  - Add scratchpad to LLMs to store intermediate computation; something parallel with chain of thought.
+    
 - [2021/10] **LORA: Low-Rank Adaptation of Large Language Models** [[paper](https://arxiv.org/pdf/2106.09685)] [[code](https://github.com/microsoft/LoRA)]
   - An efficient method to fine-tune LLMs.
 
-- [2021/03] **ELECTRA: PRE-TRAINING TEXT ENCODERS
-AS DISCRIMINATORS RATHER THAN GENERATORS** [[paper](https://arxiv.org/pdf/2003.10555)] [[code](https://github.com/google-research/electra)]
+- [2021/03] **ELECTRA: PRE-TRAINING TEXT ENCODERS AS DISCRIMINATORS RATHER THAN GENERATORS** [[paper](https://arxiv.org/pdf/2003.10555)] [[code](https://github.com/google-research/electra)]
   - Use token discriminator to train BERT.
 
 - [2020/01] **Scaling laws for neural language models** [[paper](https://arxiv.org/pdf/2001.08361)]
@@ -88,6 +135,9 @@ AS DISCRIMINATORS RATHER THAN GENERATORS** [[paper](https://arxiv.org/pdf/2003.1
 - [2019/10] **Exploring the Limits of Transfer Learning with a Unified
 Text-to-Text Transformer** [[paper](https://arxiv.org/pdf/1910.10683)] [[code](https://github.com/google-research/text-to-text-transfer-transformer)]
   - IMPORTANT. Propose T5 which transform all NLP tasks into text-to-text format. The starter of prompt-based learning.
+
+- [2019/02] **THE CURIOUS CASE OF NEURAL TEXT DeGENERATION** [[paper](https://arxiv.org/pdf/1904.09751)]
+  - Repetitive and dull generation of LLMs. Propose nucleus sampling, which is widely used in the field of LLMs.
   
 ## 2. LLM for Coding
 
